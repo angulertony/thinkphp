@@ -1,4 +1,0 @@
-﻿官方文档:http://document.thinkphp.cn/manual_3_2.html
-git使用(英):https://git-scm.com/book/en/v2
-git使用(英):https://git-scm.com/book/zh/v2/
-中文翻译资料:https://github.com/oldratlee/translations
