@@ -1,0 +1,2 @@
+﻿官方文档:http://document.thinkphp.cn/manual_3_2.html
+test111111
