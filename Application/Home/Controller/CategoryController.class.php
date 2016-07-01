@@ -10,11 +10,11 @@ class CategoryController extends Controller {
 	 * */
     public function index(){
 		$categroyD = D("Category");
-		echo 111;
 		$test = $categroyD->where("class=1")->find();
-		
 		$level1 = $categroyD->getLevel1();
-		
-		dump($level1);
     }
+	
+	
+	
+	
 }

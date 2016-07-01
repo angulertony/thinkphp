@@ -26,10 +26,5 @@ class CategoryModel extends Model {
 	//获取该分类下所有子类
 	public function getChildren($parent){
 	}
-	
-	
-	
-		
-		
 }
 	
