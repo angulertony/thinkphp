@@ -1,0 +1,37 @@
+/* 中间 */
+.middle-mine{min-height:621px;width: 100%;min-width: 735px;background: url(../image/pg1.jpg) no-repeat;padding-top: 20px;background-attachment: relative;background-size: cover;background-position: center center;width: 100%;color: #ffffff;position: relative;-webkit-background-size: 100%;-moz-background-size: 100%;-o-background-size: 100%;background-size: 100%;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+.middle-mine .mine-img{background-repeat: no-repeat;background-position: 0 0;height: 300px;overflow: visible;}
+.middle-mine .mine-txt{text-align: center;}
+.middle-mine .mine-txt div{width: 70%;position: relative;top: 50px;}
+.middle-mine .mine-txt div button{background: #C1E0FE;border: 1px solid #c1a0fe;border-radius: 5px;font-size: 25px;color: #FFFFFF;}
+.middle-mine .mine-txt h2{letter-spacing: 0;font-family: "HanHei SC", "PingHei", "PingFang SC", "STHeitiSC-Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
+.middle-mine .mine-txt h3{}
+.mine-order{background: rgba(255,255,255,0.3);position: absolute;margin-top:-188px;width:92%;height: 188px;}
+.order-mine-page li{display: inline-block;float: left;/*width: 15%;*/text-align: center;border: 1px solid #BBBBBB;padding: 5px;margin-left: 1%;margin-left: 1%;background: rgba(255,255,255,0.3);margin-top: 1%;}
+.mine-order label{display: inline-block;float: right;/*width: 15%;*/text-align: center;border: 1px solid #BBBBBB;padding: 0 10px;margin-right: 1%;font-size: 25px;font-weight: bold;background: rgba(255,255,255,0.3);margin-top: 1%;border-radius:5px ;}
+.order-menu{position: absolute;width: 92%;height: 188px;margin-top: -188px;background: rgba(255,255,255,0.3);}
+.order-menu div span{display: inline-block;float: right;background: rgba(0,0,0,0.3);color: #FFFFFF;font-size: 18px;font-weight: bold;padding: 0 5px;border-radius: 5px;}
+.order-mine-page{display: block;overflow: hidden;height: 160px;background: rgba(26,26,26,0.6);padding: 0 2%;}
+.order-mine-page li{display: inline-block;float: left;/*width: 15%;*/text-align: center;border: 1px solid #BBBBBB;padding: 5px;margin-left: 1%;margin-left: 1%;background: rgba(255,255,255,0.3);margin-top: 1%;}
+.order-head{font-size: 20px;font-weight: bold;color: #FFFFFF;height: 29px;line-height: 29px;}
+@media only screen and (min-width:1200px) {
+	.middle-mine .mine-txt div button{width: 230px;font-size: 25px;padding: 10px;}
+	.middle-mine .mine-txt h2{font-size: 48px;}
+	.middle-mine .mine-txt h3{font-size: 32px;}
+}
+@media only screen and (min-width:992px) and (max-width:1200px){
+	.middle-mine .mine-txt div button{width: 230px;font-size: 25px;padding: 10px;}
+	.middle-mine .mine-txt h2{font-size: 48px;}
+	.middle-mine .mine-txt h3{font-size: 32px;}
+}
+@media only screen and (min-width:735px) and (max-width:992px){
+	.middle-mine .mine-txt div button{width: 160px;font-size: 20px;padding:5 10px;}
+	.middle-mine .mine-txt h2{font-size: 38px;}
+	.middle-mine .mine-txt h3{font-size: 25px;}
+}
+/*
+@media only screen and (max-width:375px){
+	.middle-mine .mine-txt div button{width: 100px;font-size: 18px;padding:0 10px;}
+	.middle-mine .mine-txt h2{font-size: 28px;}
+	.middle-mine .mine-txt h3{font-size: 20px;}
+}*/

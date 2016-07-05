@@ -1,0 +1,73 @@
+<!--
+	作者：ght
+	时间：2016-07-01
+	描述：mine / order and interfix
+-->
+<include file="./Application/Home/View/Category/header.html"/>
+<section class="middle-mine">
+		<div class="mine-txt">
+			<div>
+						<h2 >上XueXYZ</h2>
+		<h3 >轻松学习，快乐提高。</h3>
+					<button type="button">开始学习</button>
+			</div>
+		</div>
+		<div class="mine-img">
+				<div></div>
+		</div>
+</section>
+<div class="mine-order">
+			<div class="order-head">订制类型:</div>
+			<ul class="order-mine-page">
+				<li>php</li>
+				<li>android</li>
+				<li>web前端</li>
+				<label>+</label>
+			</ul>
+</div>
+<div class="order-menu" style="display: none;">
+	<div class="order-head">订制类型:<span>x</span></div>
+	<ul class="order-mine-page">
+		<li>php</li>
+		<li>android</li>
+		<li>web前端</li>
+	</ul>
+</div>
+<div class="interfix">
+	<div class="order-head">相关推荐:</div>
+	<ul class="fix-page">
+		<li class="fix-page-search1">
+			<a></a>
+			<a></a>
+			<a></a>
+			<a></a>
+			<a></a>
+		</li>
+		<li class="fix-page-search2">
+			<a></a>
+			<a></a>
+			<a></a>
+			<a></a>
+			<a></a>
+		</li>
+		<li class="fix-page-search3">
+			<a></a>
+			<a></a>
+			<a></a>
+			<a></a>
+			<a></a>
+		</li>
+	</ul>
+</div>
+<script>
+	$(".mine-order ul label").click(function(){
+		$(".mine-order").fadeOut("slow");
+		$(".order-menu").fadeIn("slow");
+	});
+	$(".order-menu div span").click(function(){
+		$(".mine-order").fadeIn("slow");
+		$(".order-menu").fadeOut("slow");
+	})
+</script>
+<include file="./Application/Home/View/Category/bottom.html"/>
+<include file="./Application/Home/View/Category/footer.html"/>
