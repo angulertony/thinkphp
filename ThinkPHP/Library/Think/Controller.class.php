@@ -20,7 +20,7 @@ abstract class Controller {
      * @access protected
      */    
     protected $view     =  null;
-
+	
     /**
      * 控制器参数
      * @var config
@@ -32,6 +32,7 @@ abstract class Controller {
      * 架构函数 取得模板对象实例
      * @access public
      */
+     
     public function __construct() {
         Hook::listen('action_begin',$this->config);
         //实例化视图类
@@ -302,6 +303,12 @@ abstract class Controller {
         // 执行后续操作
         Hook::listen('action_end');
     }
+	
+	protected function visitor(){
+		return Think::instance('Think\Visitor');
+	}
 }
+
+
 // 设置控制器别名 便于升级
 class_alias('Think\Controller','Think\Action');

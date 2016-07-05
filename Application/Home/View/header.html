@@ -9,8 +9,13 @@
 		<meta name="author" content="www.baozho.cn">
 		<meta name="copyright" content="Baozho Inc. All Rights Reserved">
 		<meta name="date" content="2016-07-01">
-		<link rel="stylesheet" href="css/commen.css"/>
-		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="/Application/Home/View/css/commen.css"/>
+		<link rel="stylesheet" href="/Application/Home/View/css/buttons_demo.css" />
+		<link rel="stylesheet" href="/Application/Home/View/css/header.css" />
+		<link rel="stylesheet" href="/Application/Home/View/css/mine.css" />
+		<link rel="stylesheet" href="/Application/Home/View/css/footer.css" />
+		<link rel="stylesheet" href="/Application/Home/View/css/category.css" />
+		<script type="text/javascript" src="/Application/Home/View/js/jquery-1.9.1.js"></script>
 	</head>
 	<body>
 		<!--
@@ -34,77 +39,19 @@
 	</div>
 </div>
 <header class="header-bottom">
-	<!-- logo -->
 	<div class="header-logo">
-		<img src=""/>
+		<img src="/Application/Home/View/image/logo.png" style="width: 200px;height: 60px;"/>
 	</div>
-	<!-- hot search -->
+	 
 	<div class="header-search">
 		<input type="text" class="search-text" placeholder="搜索精彩内容">
 		<div class="search-hot">
-			<p>热门搜索:</p>
 			<ul class="search-hot-list">
-				<li><a>1</a></li>
-				<li><a>2</a></li>
-				<li><a>3</a></li>
-				<li><a>4</a></li>
-				<li><a>5</a></li>
+				<volist name="navigation" id="nav">
+					<li class="button-action">{$nav}</li>
+				</volist>
 			</ul>
+
 		</div>
 	</div>
 </header>
-<section class="middle-mine">
-		<div class="mine-txt">
-			<div>
-						<h2 >上XueXYZ</h2>
-		<h3 >轻松学习，快乐提高。</h3>
-					<button type="button">开始学习</button>
-			</div>
-		</div>
-		<div class="mine-img">
-			<figure >
-				<div></div>
-			</figure>
-		</div>
-		<div class="mine-order">
-			<div>订制类型:</div>
-			<ul>
-				<li>php</li>
-				<li>android</li>
-				<li>web前端</li>
-			</ul>
-		</div>
-</section>
-<div>
-	<div>订制类型:</div>
-	<ul>
-		<li>php</li>
-		<li>android</li>
-		<li>web前端</li>
-	</ul>
-</div>
-<div>
-	<div>相关推荐:</div>
-	<ul>
-		<li>1</li>
-		<li>2</li>
-		<li>3</li>
-	</ul>
-</div>
-<section >
-	<div >
-		<a ></a>
-		<div >
-			<div >
-						<h2 >MacBook</h2>
-		<h3 >轻于时代，先于时代。</h3>
-
-			</div>
-		</div>
-		<div >
-			<figure >
-				<div class="hero-image-inner"></div>
-			</figure>
-		</div>
-	</div>
-</section>

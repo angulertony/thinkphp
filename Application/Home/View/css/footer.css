@@ -1,0 +1,21 @@
+/*底部--相关推荐*/
+
+.interfix{}
+.interfix .fix-page{display: block;}
+.interfix .fix-page li{display: inline-block;width: 100%;}
+.interfix .fix-page li a{display: inline-block;width: 100px;height: 80px;float: left;}
+.fix-page .fix-page-search1{background: #ffce41;opacity: 0.3;}
+ 
+
+/*底部--排行*/
+
+.sorting{overflow: hidden;}
+.sorting ul{display: block;width: 20%;float: left;background:#A0C5E8;opacity: 0.8;margin: 0 2.5%;}
+.sorting ul li{display: inline-block;width: 100%;height: 25px;line-height: 25px;border-bottom: 1px solid #BBBBBB;}
+
+/*底部--声明*/
+
+.copyright{margin: 5px 0;}
+.copyright div{font-size: 18px;font-family: -webkit-pictograph;text-align: center;}
+.footer-nav{position: static;width: 0px;height: 0px;border: none;padding: 0px;margin: 0px;float: right;margin-top: -200px;}
+.footer-nav div a{text-decoration: none;cursor: pointer;display: block;position: relative;width: 17px;height: 66px;padding: 28px 4px 0;margin: 5px 0;text-align: center;line-height: 14px;text-decoration: none;background-position: -85px -149px;}

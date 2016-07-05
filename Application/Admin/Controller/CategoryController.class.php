@@ -15,9 +15,9 @@ class CategoryController extends Controller{
 		
 	}
 	
-	public function add(){
+	public function addCategory(){
 		if(!IS_POST){
-			$this->display("CategoryAdd.html");
+			$this->display("categoryAdd.html");
 		}else{
 			/*需要的数据
 			 * 1.上级主键id
@@ -31,12 +31,24 @@ class CategoryController extends Controller{
 			
 			$id = $this->categoryD->addData($class,$pid,$name,$ifShow,$sortOrder);
 			
-			//XML路径
-			if(!file_exists($xmlPath)){	return;}
+			if(!file_exists($this->xmlPath)){	return;	}
 			
-			$xml = simplexml_load_file($xmlPath);
+			$xml = simplexml_load_file($this->xmlPath);
 			$xml->addChild($id,$name);
 			$xml->$id->addAttribute("pid",$pid);
+			$xml->asXML($this->xmlPath);
 		}
+	}
+	
+	public function addResource(){
+		if(!IS_POST){
+			$this->display("resouceAdd.html");
+		}else{
+			
+			
+		}
+		
+		
+		
 	}
 }

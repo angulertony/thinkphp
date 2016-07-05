@@ -36,7 +36,7 @@ const EXT               =   '.class.php';
 // 系统常量定义
 defined('THINK_PATH')   or define('THINK_PATH',     __DIR__.'/');
 defined('APP_PATH')     or define('APP_PATH',       dirname($_SERVER['SCRIPT_FILENAME']).'/');
-defined("PUBLIC_ROOT")  or define("PUBLIC_ROOT",   $_SERVER["DOCUMENT_ROOT"]."/Public/");
+defined("PUBLIC_ROOT")  or define("PUBLIC_ROOT",   $_SERVER["DOCUMENT_ROOT"]."/Public/");//public目录路径
 defined('APP_STATUS')   or define('APP_STATUS',     ''); // 应用状态 加载对应的配置文件
 defined('APP_DEBUG')    or define('APP_DEBUG',      false); // 是否调试模式
 
@@ -65,6 +65,8 @@ defined('CACHE_PATH')   or define('CACHE_PATH',     RUNTIME_PATH.'Cache/'); // �
 defined('CONF_EXT')     or define('CONF_EXT',       '.php'); // 配置文件后缀
 defined('CONF_PARSE')   or define('CONF_PARSE',     '');    // 配置文件解析方法
 defined('ADDON_PATH')   or define('ADDON_PATH',     APP_PATH.'Addon');
+
+defined('SITE_URL')   or define('SITE_URL',    $_SERVER["SERVER_NAME"]);//网站域名
 
 // 系统信息
 if(version_compare(PHP_VERSION,'5.4.0','<')) {

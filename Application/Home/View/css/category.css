@@ -1,0 +1,65 @@
+.search-mine{min-height: 500px;}
+.search-page1{position:relative;height: auto;font-family: fantasy;font-size: 30px;background: rgba(0,0,0,0.3);display: -webkit-box;width: 90%;margin:0 5%;
+/*animation:mymoved 2s infinite;
+-webkit-animation:mymove 2s infinite;*/
+/*animation-iteration-count:1;
+-webkit-animation-iteration-count:1;
+animation-fill-mode:forwards;*/
+}
+@keyframes mymove{
+	from{
+		top: 0;
+		font-size: 30px;
+		width: 90%;
+		margin: 0 5%;
+		background: rgba(0,0,0,0.3);
+		padding: 0;
+		}
+	to{
+		top: -19px;
+		font-size: 14px;
+		width: 100%;
+		margin: 0;
+		background: rgba(255,255,255,0.3);
+		padding: 0 2px;
+		}
+}
+.search-page1 a{color: #FFFFFF;display: inline-block;}
+.search-page1 a:hover,.search-page1 a:active{color: #F64C59;}
+.search-page1 a li{margin: 10px;display: inline-block;}
+.shousuo{background: rgba(255,255,255,0.8);position: relative;margin-top: -20px;padding: 2px 0;}
+.shousuo a{display: inline-block;}
+.shousuo a li{display: inline-block;font-size: 14px;padding: 0 5px;font-family: fantasy;color: #333;margin: 0 5px;border: 0px transparent;}
+.search-page1 .int{color: #E4393C;background: rgba(0,0,0,0.45);}
+.search-page2{position:absolute;height: 0;font-family: fantasy;font-size: 30px;background: rgba(0,0,0,0.3);width: 92%;margin:0;transform: translateY(0);
+/*-webkit-animation:selectmove 2s infinite;
+-webkit-animation-delay: -2s;
+-webkit-animation-iteration-count:1;
+animation-fill-mode:forwards;*/
+}
+@keyframes selectmove{
+	from{
+		height: 0;
+		transform: translateY(0);
+		/*overflow: hidden;*/
+		}
+	to{
+		height: inherit;
+		transform: translateY(-479px);
+		}
+}
+.search-page2 a{color: #FFFFFF;display: inline-block;}
+.search-page2 a:hover,.search-page1 a:active{color: #F64C59;background: rgba(255,255,255,0.45);}
+.search-page2 a li{margin: 10px;display: inline-block;}
+.shousuo{background: rgba(255,255,255,0.8);position: relative;margin-top: -20px;padding: 2px 0;}
+.shousuo a{display: inline-block;}
+.shousuo a li{display: inline-block;font-size: 14px;padding: 0 5px;font-family: fantasy;color: #333;margin: 0 5px;border: 0px transparent;}
+.stair-nav{overflow: hidden;margin-bottom: 20px;position: relative;}
+.stair-nav div{overflow: hidden;width: 100%;}
+.stair-nav div div{overflow: hidden;width: 50%;}
+.stair-nav h2{display: inline-block;}
+.stair-nav .nav-vedio,.stair-nav .nav-text{display: inline-block;width: 100%;overflow: auto;}
+.stair-nav .nav-vedio{float: left;}
+.stair-nav .nav-vedio .vedio-list,.stair-nav .nav-text .text-list{display: block;width: 1000px;height: 100px;}
+.stair-nav .nav-vedio .vedio-list li,.stair-nav .nav-text .text-list li{display: inline-block;float: left;width: 100px;height: 100px;background: #C1A0FE;overflow: hidden;}
+.stair-nav .nav-text{float: right;}
