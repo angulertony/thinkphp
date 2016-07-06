@@ -3,13 +3,13 @@
 	时间：2016-07-01
 	描述：mine / order and interfix
 -->
-{include file="Public/header.html"}
+<include file="./Application/Home/View/header.html"/>
 <section class="middle-mine">
 		<div class="mine-txt">
 			<div>
 						<h2 >上XueXYZ</h2>
 		<h3 >轻松学习，快乐提高。</h3>
-					<button type="button">开始学习</button>
+					<a href="{:U('Category/index')}"><button type="button">开始学习</button></a>
 			</div>
 		</div>
 		<div class="mine-img">
@@ -26,11 +26,12 @@
 			</ul>
 </div>
 <div class="order-menu" style="display: none;">
-	<div class="order-head">订制类型:<span>x</span></div>
+	<div class="order-head">订制类型:</div>
 	<ul class="order-mine-page">
 		<li>php</li>
 		<li>android</li>
 		<li>web前端</li>
+		<span class="button-box">返回</span>
 	</ul>
 </div>
 <div class="interfix">
@@ -64,9 +65,10 @@
 		$(".mine-order").fadeOut("slow");
 		$(".order-menu").fadeIn("slow");
 	});
-	$(".order-menu div span").click(function(){
+	$(".order-menu ul span").click(function(){
 		$(".mine-order").fadeIn("slow");
 		$(".order-menu").fadeOut("slow");
 	})
 </script>
-{include file="bottom.html"}
+<include file="./Application/Home/View/bottom.html"/>
+<include file="./Application/Home/View/footer.html"/>

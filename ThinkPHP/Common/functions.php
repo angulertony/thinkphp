@@ -348,7 +348,7 @@ function I($name,$default='',$filter=null,$datas=null) {
             }
         }
     }elseif(isset($input[$name])) { // 取值操作
-        $data       =   $input[$name];
+        $data       =   trim($input[$name]);
         $filters    =   isset($filter)?$filter:C('DEFAULT_FILTER');
         if($filters) {
             if(is_string($filters)){
@@ -1548,3 +1548,4 @@ function think_filter(&$value){
 function in_array_case($value,$array){
     return in_array(strtolower($value),array_map('strtolower',$array));
 }
+

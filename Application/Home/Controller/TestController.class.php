@@ -4,6 +4,25 @@ use Think\Controller;
 class TestController extends Controller {
 
 	function index() {
+		$a = array(
+			1,
+			2,
+			3,
+		);
+		dump($a);
+		echo "<br />===<br />";
+		var_dump($a);
+		exit;
+		if(!IS_POST){
+			
+			$this->display("/test");
+		}else{
+			
+			$usernameT = I("post.usernameT","","/^1[34578]\d{9}$/");
+			echo count($usernameT);
+			echo "<br />====<br />";
+			var_dump($usernameT);
+		}
 
 	}
 
@@ -19,10 +38,25 @@ class TestController extends Controller {
 //		$category->asXML($xmlpath);//保存
 	}
 	
-	function cookies(){
-//		$name = "xyzthinkxyz";
-//		cookie('name','think',3600); // 指定cookie保存时间	
+	function session(){
+		$head = "xyz";
+		$foot = "xyzz";
+		$test = 1;
+		if($head !== $foot || $foot !== "xyz" || $test != 1){
+			echo 11111111;  
+		}
+		echo 222;
+		exit;
 		
+		
+		$_SESSION_EXPIRE = C("SESSION_EXPIRE");
+		$sid = 728;
+		
+		session(array("id"=>$sid,'name'=>"user",'expire'=>$_SESSION_EXPIRE));
+		session("user.name","qskane");
+		echo session('?name');
+		echo "<br />";
+		dump(session());
 	}
 	
 	function test_cookie(){
@@ -51,9 +85,26 @@ class TestController extends Controller {
 		$decrypted = "";
 		openssl_public_decrypt(base64_decode($encrypted),$decrypted,$pu_key);//私钥加密的内容通过公钥可用解密出来  
 		$decrypted = substr($decrypted,3,(strlen($decrypted)-6));
+	}
+	
+	function test_click(){
 		
+		$id = 1111;
+		if(!IS_POST){
+			$this->display("/test");
+		}else{
+			echo "test_else";
+			echo "<br />";
+			echo  $id;
+		}
 		
-		
+	}
+	
+	function test_visitor(){
+		echo  "<br />";
+		echo "===";
+		echo  "<br />";
+		echo  $this->visitor()->get("id");
 	}
 	
 	

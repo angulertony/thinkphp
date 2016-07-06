@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [ 2016-07-04T16:25:50+08:00 ] ::1 /favicon.ico
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -23,11 +22,3 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 ERR: 无法加载模块:Thinkphp
 
-=======
-[ 2016-07-04T16:25:50+08:00 ] ::1 /favicon.ico
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-ERR: 无法加载模块:Favicon
-
->>>>>>> dd6655446e5ea48ed0e965096d888ee10f512a70
