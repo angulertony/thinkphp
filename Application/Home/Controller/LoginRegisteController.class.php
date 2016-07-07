@@ -13,8 +13,8 @@ class LoginRegisteController extends \Think\Controller\Controller{
 	}
 	
 	public function Login(){
-		$username = I("post.username");
-		$password = I("post.password");
+		$username = I("post.username/s");
+		$password = I("post.password/s");
 		check(IS_POST,array($username,$password));
 		
 		$userInfo = $this->userD->verifyUser($username,$password);

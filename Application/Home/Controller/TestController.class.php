@@ -4,24 +4,14 @@ use Think\Controller;
 class TestController extends Controller {
 
 	function index() {
-		$a = array(
-			1,
-			2,
-			3,
-		);
-		dump($a);
-		echo "<br />===<br />";
-		var_dump($a);
-		exit;
 		if(!IS_POST){
-			
 			$this->display("/test");
 		}else{
+			$usernameT = I("get.usernameT");
+			//$usernameT = I("post.usernameT",null,"/^1[34578]\d{9}$/");
+			//check(IS_POST,$usernameT);
+			echo $usernameT."11";
 			
-			$usernameT = I("post.usernameT","","/^1[34578]\d{9}$/");
-			echo count($usernameT);
-			echo "<br />====<br />";
-			var_dump($usernameT);
 		}
 
 	}

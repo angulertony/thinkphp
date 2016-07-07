@@ -7,8 +7,8 @@
 <section class="middle-mine">
 		<div class="mine-txt">
 			<div>
-						<h2 >上XueXYZ</h2>
-		<h3 >轻松学习，快乐提高。</h3>
+		<h2 >上XueXYZ</h2>
+		<h3 >轻松学习，快乐提高。{$userid}</h3>
 					<a href="{:U('Category/index')}"><button type="button">开始学习</button></a>
 			</div>
 		</div>
@@ -16,50 +16,72 @@
 				<div></div>
 		</div>
 </section>
-<div class="mine-order">
-			<div class="order-head">订制类型:</div>
-			<ul class="order-mine-page">
-				<li>php</li>
-				<li>android</li>
-				<li>web前端</li>
-				<label>+</label>
-			</ul>
-</div>
-<div class="order-menu" style="display: none;">
-	<div class="order-head">订制类型:</div>
-	<ul class="order-mine-page">
-		<li>php</li>
-		<li>android</li>
-		<li>web前端</li>
-		<span class="button-box">返回</span>
-	</ul>
-</div>
+
+<if condition="!empty($userid)"> 
+	<div class="mine-order">
+				<div class="order-head">订制类型:</div>
+				<ul class="order-mine-page">
+					<foreach name="userNav" item="value" key="key">
+						<li>{$value}</li>
+					</foreach>
+					<label>+</label>
+				</ul>
+	</div>
+	<div class="order-menu" style="display: none;">
+		<div class="order-head">订制类型:</div>
+		<ul class="order-mine-page">
+			<span class="button-box">返回</span>
+		</ul>
+	</div>
+</if>
+
 <div class="interfix">
 	<div class="order-head">相关推荐:</div>
 	<ul class="fix-page">
-		<li class="fix-page-search1">
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-		</li>
-		<li class="fix-page-search2">
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-		</li>
-		<li class="fix-page-search3">
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-		</li>
+		<foreach name="recommend" key="key" item="value">
+			<li class="fix-page-search1">	
+				{$value}
+			</li>
+		</foreach>
+		
+		
 	</ul>
 </div>
+
+<if condition="!empty($userid)"> 	
+	<div class="annals">
+		<div class="order-head">浏览记录:</div>
+		<ul class="order-mine-page">
+			<foreach name="history" key="key" item="value">
+				<li>{$value}</li>
+			</foreach>
+		</ul>
+	</div>
+</if>
+
+<div class="sorting">
+	<ul class="sort_1">
+		<foreach name="rank1" key="key" item="value">
+				<li>{$value}</li>
+		</foreach>
+	</ul>
+	<ul class="sort_2">
+		<foreach name="rank2" key="key" item="value">
+				<li>{$value}</li>
+		</foreach>
+	</ul>
+	<ul class="sort_3">
+		<foreach name="rank3" key="key" item="value">
+				<li>{$value}</li>
+		</foreach>
+	</ul>
+	<ul class="sort_4">
+		<foreach name="rank4" key="key" item="value">
+				<li>{$value}</li>
+		</foreach>
+	</ul>
+</div>
+
 <script>
 	$(".mine-order ul label").click(function(){
 		$(".mine-order").fadeOut("slow");

@@ -18,19 +18,30 @@ class CategoryController extends Controller {
 		$level1 = array(
 			0=>array(
 				"id"=>1,
-				"name"=>"php",
+				"name"=>"中文",
 			),				
 			1=>array(
 				"id"=>2,
-				"name"=>"js",
+				"name"=>"过长中",
 			),		
 			2=>array(
 				"id"=>3,
-				"name"=>"css",
+				"name"=>"csssss",
 			),		
+			3=>array(
+				"id"=>4,
+				"name"=>"html",
+			),	
+			
+			4=>array(
+				"id"=>5,
+				"name"=>"Aandroid",
+			),
+			6=>array(
+				"id"=>7,
+				"name"=>"C",
+			),
 		);
-		
-		
 		$this->assign("level1",$level1);
 		$this->display("/category");
     }
@@ -59,6 +70,14 @@ class CategoryController extends Controller {
 		);
 
 		$this->ajaxReturn($children);	
+	}
+	
+	public function test_add(){
+		$this->categoryD = D("Category");
+		$getlevel1 = $this->categoryD ->getChild(1);
+		dump($getlevel1);
+//		$this->categoryD->addData(1,2,"test");
+		
 	}
 	
 }
