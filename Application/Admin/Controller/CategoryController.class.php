@@ -23,11 +23,11 @@ class CategoryController extends Controller{
 			 * 1.上级主键id
 			 * 2.分类名
 			 * */
-			$pid = I("post.pid/d",0,"int");
-			$name = I("post.name/s");
+			$pid = I("post.pid",0,"int");
+			$name = I("post.name");
 			$class = $pid - 1;
-			$ifShow = I("post.ifShow/d");
-			$sortOrder = I("post.sortOrder/d");			
+			$ifShow = I("post.ifShow");
+			$sortOrder = I("post.sortOrder");			
 			
 			$id = $this->categoryD->addData($class,$pid,$name,$ifShow,$sortOrder);
 			

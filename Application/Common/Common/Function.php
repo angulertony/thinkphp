@@ -5,8 +5,7 @@
  * $id  判断是新登录,还是已登录 ;新登录传入id值,0已登录
  */
 function visitor($id=0){
-	$Visitor = new Common\lib\VisitorLib();
-	$Visitor->$isMust = $isMust;
+	$Visitor = new \Common\Lib\VisitorLib();
 	if($id){
 		//用户是新登录进入,则id需传入用户id
 		$Visitor->setCookie($id);
@@ -60,20 +59,20 @@ function visitor($id=0){
  * $type 提交方式
  * $data 检测数据
  */
-function check($type,$data=1){
+function check($type,$data){
 	if(!$type){
-		echo "<br />非法提交,提交方式(post,get,ajax...)不匹配 <br />";
+		echo "<br />非法提交,提交方式不匹配 <br />";
 		exit;
 	}
 	
-	if(!is_array($data)){
-		if(empty($data)){
-			echo "<br />提交数据错误 <br />";
-			exit;
-		}
-	}else{
+	if(!is_array($data) && empty($data) ){
+		//前台提示错误
+		echo "<br />提交数据错误 <br />";
+		exit;
+	}elseif(is_array($data) ){
 		foreach($data as $key=>$value){
 			if(empty($value)){
+				//前台提示错误
 				echo "<br />提交数据错误,数组位置:{$key} <br />";
 				exit;	
 			}

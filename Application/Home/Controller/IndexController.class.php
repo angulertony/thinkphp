@@ -2,76 +2,55 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
-	
-	
-	public function _before_index(){
-		
-	}
-	
-	
     public function index(){
-    	//$id = visitor()->get("id");//id可能为0,代表用户未登录过没有相关cookie,session记录
-		$id= 1;
-		
-		$this->navigation($id);
-		$this->recommend($id);
-		$this->userNav_history($id);
-		$this->rank();
-    	$this->display("/index");
-	}
-	
-	private function navigation($id){
-		$navigation=C('NAVIGATION');//NAVIGATION
-		$this->assign('navigation',$navigation);
-		$this->assign("userid",$id);
-	}
-	
-	private function recommend($id){
-		if($id){
-			//相关推荐=======
-			$recommend = array(
-				"用户登录","用户登录推荐","推荐","测","测试数",
-			);
-		}else{
-			$recommend = array(
-				"未登录","用户未登录","推荐","测","测试数",
-			);
-		}
-		$this->assign("recommend",$recommend);
-	}
-	
-	
-	private function userNav_history($id){
-		if($id){
-			//用户导航=======需要登录
-			$userNav = array(
-				"php","android","java","html","pc","c",
-				"测试数据","测试数据测试数据","测试","测","测试数",
-			);
-			$this->assign("userNav",$userNav);
+    	//$ss='http://www.php100.com/html/php/hanshu/2013/0905/4650.html';
 
-			//学习历史=======需要登录
-			$history = array(
-				"学习历史","学习历史学习历史","历史","测","测试数",
-			);
-			$this->assign("history",$history);
-		}
+		//echo substr($ss,0,$length+3);
+        //$this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px } a,a:hover{color:blue;}</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>版本 V{$Think.version}</div><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_55e75dfae343f5a1"></thinkad><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
+    	//分的大类--导航条
+    	$navigation=C('NAVIGATION');//NAVIGATION
+		//$navigation=explode(',',$navigation);
+		//$new['count']=count($new);
+		$this->assign('navigation',$navigation);
+		//开始的背景图
+		$startBg= M('start_bg');
+		$startBg=$startBg->select();
+		$rand=mt_rand(0,count($startBg)-1);
+		$this->assign('rand',$rand);
+		$this->assign('start_bg',$startBg);
+		//foreach($start_bg as $stbg){
+			//$no=mt_rand(0,count($stbg));
+			//echo "<img style="width:100px;height:100px;' src='/thinkphp/Public/upload/start_bg/".$sbg['image_path'].'/>';
+			//echo "<img src="/thinkphp/Public/upload/start_bg/$sbg['image_path']" />"
+			//echo "<img style='width:100px;height:100px;' src='/thinkphp/Public/upload/start_bg/".$stbg['image_path']."' /><br/>";
+			//echo "<br/>";
+			//echo $stbg['image_path'];
+		//}
+		//私人订制
+		$private= M('private');
+		//$shuju=$start_bg->join('xyz_cates ON xyz_private.collect_no = xyz_cates.id')->select();
+		//$data=$private->alias('a')->join('xyz_cates as b ON a.collect_no = b.id')->where('a.user_id=3')->select();
+		$data=$private->select();
+		//dump($data[8]);
+		//var_dump($data);
+		$this->assign('data',$data);
+		//echo '--------------------------------------------------------------------<br/><br/>';
+		//echo "<img style='width:20px;height:20px;' src='/thinkphp/Public/upload/start_bg/".$shuju[0]['logo']."' /> <span style='font-size:12px;'>".$shuju[0]['name']."</span><br/>";
+		//echo "<img style='width:20px;height:20px;' src='/thinkphp/Public/upload/start_bg/".$shuju[1]['logo']."' /> <span style='font-size:12px;'>".$shuju[1]['name']."</span><br/>";
+		//var_dump($shuju[0]['logo']);
+		$this->display();
 	}
-	
-	private function rank(){
-		$rank = array(
-			"排行信息",
-			"排行信息",
-			"排行信息",
-			"排行信息",
-			"排行信息",
-		);
-		$this->assign("rank1",$rank);
-		$this->assign("rank2",$rank);
-		$this->assign("rank3",$rank);
-		$this->assign("rank4",$rank);
+	public function left(){
+		//var_dump($rr);
+		$this->display();
 	}
-	
+	public function right(){
+		echo '<h2>welcome<h2>';
+	}
+	public function top(){
+		$this->display();
+		
+	}
 
 	public function yun(){
 		$private= M('private');
@@ -134,6 +113,9 @@ class IndexController extends Controller {
 			}
 			
 		}
+		
+		
+		
 		//$this->display();
 	}
 	public function del(){

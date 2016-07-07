@@ -2,10 +2,6 @@
 namespace Home\Model;
 use Think\Model;
 class CategoryModel extends Model {
-	//使用add 时.
-//  protected $insertFields = array('account','password','nickname','email');
-//  protected $updateFields = array('nickname','email');
-//	
 	
 	//获取1级分类
 	public function getLevel1(){
@@ -24,9 +20,8 @@ class CategoryModel extends Model {
 	
 	//获取下1级
 	public function getChild($parent){
-		return $this->where(array("parent"=>$parent,"if_show"=>1))->select();
+		return $this->where("parent={$parent} and if_show=1")->select();
 	}
-	
 	
 	//获取该分类下所有子类
 	public function getChildren($parent){
@@ -43,8 +38,11 @@ class CategoryModel extends Model {
 		);
 		$id = $this->add($addData);
 		if(!is_numeric($id)){
-			//跳转错误页面
-			echo "插入数据出错";
+			//调用错误处理,t统一处理错误
+			echo "error:CategoryModel -> addData()";
+			echo "<br />";
+			echo "insert array:";
+			echo "<br />";
 			dump($addData);
 			exit;
 		}		
