@@ -1,5 +1,5 @@
 .search-mine{min-height: 500px;}
-.search-page1{position:relative;height: auto;font-family: fantasy;font-size: 30px;background: rgba(0,0,0,0.3);display: -webkit-box;width: 90%;margin:0 5%;
+.search-page1{position:relative;height: auto;font-family: fantasy;font-size: 30px;/*background: rgba(0,0,0,0.3);*/display: -webkit-box;width: 90%;margin:0 5%;
 /*animation:mymoved 2s infinite;
 -webkit-animation:mymove 2s infinite;*/
 /*animation-iteration-count:1;
@@ -24,9 +24,61 @@ animation-fill-mode:forwards;*/
 		padding: 0 2px;
 		}
 }
-.search-page1 a{color: #FFFFFF;display: inline-block;}
+.search-page1 a{color: #FFFFFF;display: inline-block;min-width: 120px;position: relative;text-align: center;cursor: pointer;}
 .search-page1 a:hover,.search-page1 a:active{color: #F64C59;}
-.search-page1 a li{margin: 10px;display: inline-block;}
+.search-page1 a li{margin: 10px;display: inline-block;color: #FFFFFF;}
+@keyframes catetop{
+	from{
+		margin:10px;
+		color: #FFFFFF;
+		}
+	to{
+		margin: 0;
+		color: #333;
+		}
+}
+
+.search-page1 a li p{position: absolute;z-index: 999;/*background: rgba(255,255,255,0.2);*/display: inline-block;font-size: 14px;top: 0;height: 63px;left: 0px;overflow: hidden;width: 100%;}
+.search-page1 a li p span{position: relative;display: inline-block;width: 100%;height: 50%;background: rgba(0,0,0,0.5);color: #FFFFFF;line-height: 31px;}
+.search-page1 .list-top{transform: translateY(-32px);}
+.search-page1 .list-bottom{transform: translateY(32px);}
+/*animation:list-topmove 2s infinite;
+-webkit-animation:list-topmove 2s infinite;
+animation-iteration-count:1;
+-webkit-animation-iteration-count:1;
+animation-fill-mode:forwards;*/
+@keyframes list-topmove{
+	from{
+		transform: translateY(-32px);
+		}
+	to{
+		transform: translateY(0px);
+		}
+}
+@keyframes list-topmoved{
+	from{
+		transform: translateY(0px);
+		}
+	to{
+		transform: translateY(-32px);
+		}
+}
+@keyframes list-bottommove{
+	from{
+		transform: translateY(32px);
+		}
+	to{
+		transform: translateY(0px);
+		}
+}
+@keyframes list-bottommoved{
+	from{
+		transform: translateY(0px);
+		}
+	to{
+		transform: translateY(32px);
+		}
+}
 .shousuo{background: rgba(255,255,255,0.8);position: relative;margin-top: -20px;padding: 2px 0;}
 .shousuo a{display: inline-block;}
 .shousuo a li{display: inline-block;font-size: 14px;padding: 0 5px;font-family: fantasy;color: #333;margin: 0 5px;border: 0px transparent;}
@@ -38,6 +90,8 @@ animation-fill-mode:forwards;*/
 animation-fill-mode:forwards;*/
 }
 @keyframes selectmove{
+	.search-page1:height;0
+	
 	from{
 		height: 0;
 		transform: translateY(0);
@@ -45,10 +99,10 @@ animation-fill-mode:forwards;*/
 		}
 	to{
 		height: inherit;
-		transform: translateY(-479px);
+		transform: translateY(-100%);
 		}
 }
-.search-page2 a{color: #FFFFFF;display: inline-block;}
+.search-page2 a{color: #FFFFFF;display: inline-block;min-width: 120px;position: relative;text-align: center;cursor: pointer;}
 .search-page2 a:hover,.search-page1 a:active{color: #F64C59;background: rgba(255,255,255,0.45);}
 .search-page2 a li{margin: 10px;display: inline-block;}
 .shousuo{background: rgba(255,255,255,0.8);position: relative;margin-top: -20px;padding: 2px 0;}
@@ -58,8 +112,9 @@ animation-fill-mode:forwards;*/
 .stair-nav div{overflow: hidden;width: 100%;}
 .stair-nav div div{overflow: hidden;width: 50%;}
 .stair-nav h2{display: inline-block;}
-.stair-nav .nav-vedio,.stair-nav .nav-text{display: inline-block;width: 100%;overflow: auto;}
+.stair-nav .nav-vedio,.stair-nav .nav-text{display: inline-block;width: 100%;overflow: hidden;}
 .stair-nav .nav-vedio{float: left;}
-.stair-nav .nav-vedio .vedio-list,.stair-nav .nav-text .text-list{display: block;width: 1000px;height: 100px;}
-.stair-nav .nav-vedio .vedio-list li,.stair-nav .nav-text .text-list li{display: inline-block;float: left;width: 100px;height: 100px;background: #C1A0FE;overflow: hidden;}
+.stair-nav .nav-vedio .vedio-list,.stair-nav .nav-text .text-list{display: block;height: auto;width: 100%;overflow: hidden;}
+.stair-nav .nav-vedio .vedio-list li,.stair-nav .nav-text .text-list li{display: inline-block;float: left;overflow: hidden;}
+.stair-nav .nav-vedio .vedio-list li{width: 30%;margin: 1% 1.5%;}
 .stair-nav .nav-text{float: right;}

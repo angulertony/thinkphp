@@ -336,6 +336,7 @@ function I($name,$default='',$filter=null,$datas=null) {
         default:
             return null;
     }
+
     if(''==$name) { // 获取全部变量
         $data       =   $input;
         $filters    =   isset($filter)?$filter:C('DEFAULT_FILTER');
@@ -348,7 +349,7 @@ function I($name,$default='',$filter=null,$datas=null) {
             }
         }
     }elseif(isset($input[$name])) { // 取值操作
-        $data       =   $input[$name];
+        $data       =   trim($input[$name]);
         $filters    =   isset($filter)?$filter:C('DEFAULT_FILTER');
         if($filters) {
             if(is_string($filters)){
@@ -363,11 +364,11 @@ function I($name,$default='',$filter=null,$datas=null) {
             }elseif(is_int($filters)){
                 $filters    =   array($filters);
             }
-            
             if(is_array($filters)){
                 foreach($filters as $filter){
                     if(function_exists($filter)) {
                         $data   =   is_array($data) ? array_map_recursive($filter,$data) : $filter($data); // 参数过滤
+                        var_dump($data);
                     }else{
                         $data   =   filter_var($data,is_int($filter) ? $filter : filter_id($filter));
                         if(false === $data) {
@@ -1548,3 +1549,4 @@ function think_filter(&$value){
 function in_array_case($value,$array){
     return in_array(strtolower($value),array_map('strtolower',$array));
 }
+

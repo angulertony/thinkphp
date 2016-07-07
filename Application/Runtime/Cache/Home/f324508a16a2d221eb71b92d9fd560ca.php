@@ -15,6 +15,7 @@
 		<meta name="copyright" content="Baozho Inc. All Rights Reserved">
 		<meta name="date" content="2016-07-01">
 		<link rel="stylesheet" href="/Application/Home/View/css/commen.css"/>
+		<link rel="stylesheet" href="/Application/Home/View/css/buttons_demo.css" />
 		<link rel="stylesheet" href="/Application/Home/View/css/header.css" />
 		<link rel="stylesheet" href="/Application/Home/View/css/mine.css" />
 		<link rel="stylesheet" href="/Application/Home/View/css/footer.css" />
@@ -43,131 +44,100 @@
 	</div>
 </div>
 <header class="header-bottom">
-	
 	<div class="header-logo">
-		<img src=""/>
+		<!---<img src="/Application/Home/View/image/logo.png"/>--->
 	</div>
 	 
 	<div class="header-search">
 		<input type="text" class="search-text" placeholder="搜索精彩内容">
 		<div class="search-hot">
 			<ul class="search-hot-list">
+				<?php if(is_array($navigation)): $i = 0; $__LIST__ = $navigation;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><li class="button-action"><?php echo ($nav); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
 			</ul>
+
 		</div>
 	</div>
+	<section class="footer-nav">
+	<div>
+		<a>意见反馈</a>
+		<a>回到顶部</a>
+	</div>
+</section>
 </header>
 <section class="middle-mine">
 		<div class="mine-txt">
 			<div>
-						<h2 >上XueXYZ</h2>
-		<h3 >轻松学习，快乐提高。</h3>
-					<button type="button">开始学习</button>
+		<h2 >上XueXYZ</h2>
+		<h3 >轻松学习，快乐提高。<?php echo ($userid); ?></h3>
+					<a href="<?php echo U('Category/index');?>"><button type="button">开始学习</button></a>
 			</div>
 		</div>
 		<div class="mine-img">
 				<div></div>
 		</div>
 </section>
-<div class="mine-order">
-			<div class="order-head">订制类型:</div>
-			<ul class="order-mine-page">
-				<li>php</li>
-				<li>android</li>
-				<li>web前端</li>
-				<label>+</label>
-			</ul>
-</div>
-<div class="order-menu" style="display: none;">
-	<div class="order-head">订制类型:<span>x</span></div>
-	<ul class="order-mine-page">
-		<li>php</li>
-		<li>android</li>
-		<li>web前端</li>
-	</ul>
-</div>
+
+<?php if(!empty($userid)): ?><div class="mine-order">
+				<div class="order-head">订制类型:</div>
+				<ul class="order-mine-page">
+					<?php if(is_array($userNav)): foreach($userNav as $key=>$value): ?><li><?php echo ($value); ?></li><?php endforeach; endif; ?>
+					<label>+</label>
+				</ul>
+	</div>
+	<div class="order-menu" style="display: none;">
+		<div class="order-head">订制类型:</div>
+		<ul class="order-mine-page">
+			<span class="button-box">返回</span>
+		</ul>
+	</div><?php endif; ?>
+
 <div class="interfix">
 	<div class="order-head">相关推荐:</div>
 	<ul class="fix-page">
-		<li class="fix-page-search1">
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-		</li>
-		<li class="fix-page-search2">
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-		</li>
-		<li class="fix-page-search3">
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
-		</li>
+		<?php if(is_array($recommend)): foreach($recommend as $key=>$value): ?><li class="fix-page-search1">	
+				<?php echo ($value); ?>
+			</li><?php endforeach; endif; ?>
+		
+		
 	</ul>
 </div>
+
+<?php if(!empty($userid)): ?><div class="annals">
+		<div class="order-head">浏览记录:</div>
+		<ul class="order-mine-page">
+			<?php if(is_array($history)): foreach($history as $key=>$value): ?><li><?php echo ($value); ?></li><?php endforeach; endif; ?>
+		</ul>
+	</div><?php endif; ?>
+
+<div class="sorting">
+	<ul class="sort_1">
+		<?php if(is_array($rank1)): foreach($rank1 as $key=>$value): ?><li><?php echo ($value); ?></li><?php endforeach; endif; ?>
+	</ul>
+	<ul class="sort_2">
+		<?php if(is_array($rank2)): foreach($rank2 as $key=>$value): ?><li><?php echo ($value); ?></li><?php endforeach; endif; ?>
+	</ul>
+	<ul class="sort_3">
+		<?php if(is_array($rank3)): foreach($rank3 as $key=>$value): ?><li><?php echo ($value); ?></li><?php endforeach; endif; ?>
+	</ul>
+	<ul class="sort_4">
+		<?php if(is_array($rank4)): foreach($rank4 as $key=>$value): ?><li><?php echo ($value); ?></li><?php endforeach; endif; ?>
+	</ul>
+</div>
+
 <script>
 	$(".mine-order ul label").click(function(){
 		$(".mine-order").fadeOut("slow");
 		$(".order-menu").fadeIn("slow");
 	});
-	$(".order-menu div span").click(function(){
+	$(".order-menu ul span").click(function(){
 		$(".mine-order").fadeIn("slow");
 		$(".order-menu").fadeOut("slow");
 	})
 </script>
-<!--
-	作者：ght
-	时间：2016-07-01
-	描述：annals / sorting
--->
-<div class="annals">
-	<div class="order-head">浏览记录:</div>
-	<ul class="order-mine-page">
-		<li>php</li>
-		<li>node.js</li>
-		<li>svn</li>
-	</ul>
-</div>
-<div class="sorting">
-	<ul class="sort_1">
-		<li>1</li>
-		<li>2</li>
-		<li>3</li>
-		<li>4</li>
-		<li>5</li>
-	</ul>
-	<ul class="sort_2">
-		<li>1</li>
-		<li>2</li>
-		<li>3</li>
-		<li>4</li>
-		<li>5</li>
-		<li>6</li>
-		<li>7</li>
-	</ul>
-	<ul class="sort_3">
-		<li>1</li>
-		<li>2</li>
-		<li>3</li>
-	</ul>
-	<ul class="sort_4">
-		<li>1</li>
-		<li>2</li>
-	</ul>
-</div>
+
 
 <section class="copyright">
 	<div>Copyright © 2016 XueXYZ. All Rights Reserved.<br> XueXYZ 版权所有</div>
 </section>
-<section class="footer-nav">
-	<div>
-		<a>意见反馈</a>
-		<a>回到顶部</a>
-	</div>
-</section>
+</body>
+</html>

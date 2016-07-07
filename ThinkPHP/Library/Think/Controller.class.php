@@ -303,10 +303,6 @@ abstract class Controller {
         // 执行后续操作
         Hook::listen('action_end');
     }
-	
-	protected function visitor(){
-		return Think::instance('Think\Visitor');
-	}
 }
 
 

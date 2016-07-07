@@ -45,7 +45,7 @@
 </div>
 <header class="header-bottom">
 	<div class="header-logo">
-		<img src="/Application/Home/View/image/logo.png" style="width: 200px;height: 60px;"/>
+		<!---<img src="/Application/Home/View/image/logo.png"/>--->
 	</div>
 	 
 	<div class="header-search">
@@ -57,54 +57,31 @@
 
 		</div>
 	</div>
+	<section class="footer-nav">
+	<div>
+		<a>意见反馈</a>
+		<a>回到顶部</a>
+	</div>
+</section>
 </header>
 <section class="middle-mine search-mine">
 	<div>
 		<ul class="search-page1" id="category-stair">
-			
 			<?php if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-				<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
-			<?php if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-				<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
-			<?php if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-				<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
-			<?php if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-				<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-				<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
+				name:<?php echo ($value["name"]); ?>   <br />
+				================  <br />-->
+				<a><li>
+					<?php echo ($value["name"]); ?>
+					<p>
+						<span class="list-top">直接进入</span>
+						<span class="list-bottom">看看其他</span>
+					</p>
+				</li></a><?php endforeach; endif; ?>
 		</ul>
 	</div>
 </section>
 	<ul class="search-page2" id="secondary">
 						<?php if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-							<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
-						<?php if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-							<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
-						<?php if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-							<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
-						<?php if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-							<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
-						<?php if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
-		name:<?php echo ($value["name"]); ?>   <br />
-		================  <br />-->
-							<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; if(is_array($level1)): foreach($level1 as $key=>$value): ?><!--id:<?php echo ($value["id"]); ?>    <br />
 		name:<?php echo ($value["name"]); ?>   <br />
 		================  <br />-->
 							<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
@@ -138,25 +115,43 @@
 </div>
 
 <script>
-	$("#category-stair a").click(function(){
-		$("#category-stair").css({"-webkit-animation":"mymove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
+	//$("#category-stair a").click(function(){
+		//$("#category-stair").css({"-webkit-animation":"mymove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
 		//$("#category-stair").addClass("shousuo");
-		$("#secondary").css({"-webkit-animation":"selectmove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
+		//$("#secondary").css({"-webkit-animation":"selectmove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
 		//$("#secondary").addClass("search-page1");
-	});
+		//$(".search-page1 a li p").css("display","none");
+	//});
 	$("#category-stair a").each(function(index){
 		$("#category-stair a").click(function(){
 			$("#category-stair a").removeClass("int");
 			$(this).addClass("int");
 		})
-	})
+	});
+	$(".search-page1 a li p").each(function(){
+		$(".search-page1 a li p").hover(function(){
+			$(this).parent().css("color","transparent");
+			$(this).children(".list-top").css({"-webkit-animation":"list-topmove 0.1s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
+			$(this).children(".list-bottom").css({"-webkit-animation":"list-bottommove 0.1s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
+		},
+		function(){
+			$(this).parent().css("color","#fff");
+			$(this).children(".list-top").css({"-webkit-animation":"list-topmoved 0.1s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
+			$(this).children(".list-bottom").css({"-webkit-animation":"list-bottommoved 0.1s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
+		})
+	});
+	$(".search-page1 .list-bottom").click(
+		function(){
+		$("#category-stair").css({"-webkit-animation":"mymove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
+		//$("#category-stair").addClass("shousuo");
+		$("#secondary").css({"-webkit-animation":"selectmove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
+		//$("#secondary").addClass("search-page1");
+		$(".search-page1 a li p").css("display","none");
+	}
+	);
 </script>
 <section class="copyright">
 	<div>Copyright © 2016 XueXYZ. All Rights Reserved.<br> XueXYZ 版权所有</div>
 </section>
-<section class="footer-nav">
-	<div>
-		<a>意见反馈</a>
-		<a>回到顶部</a>
-	</div>
-</section>
+</body>
+</html>
