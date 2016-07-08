@@ -12,8 +12,8 @@
 .header-bottom .header-search .search-text{padding-left:30px;margin-top: ;font-size: 16px;font-weight: 400;letter-spacing: normal;color: #333;outline: none;margin: 5px 0 5px 10%;}
 .header-bottom .header-search .search-hot{display: inline-block;width: 100%;margin-left: 10%;font-weight: 400;}
 .header-bottom .header-search .search-hot p{float: left;display: inline-block;}
-.header-bottom .header-search .search-hot .search-hot-list{display: inline-block;float: left;color: #e4393c;margin: 0 15px;width: 100%;}
-.header-bottom .header-search .search-hot .search-hot-list li{float: left;display: inline-block;width: 20%;text-align: center;margin-left: 5%;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;}
+.header-bottom .header-search .search-hot .search-hot-list{display: inline-block;float: left;color: #e4393c;margin: 0 15px;width: 100%;height: 20px;line-height: 20px;}
+.header-bottom .header-search .search-hot .search-hot-list li{float: left;display: inline-block;width: 20%;text-align: center;margin-left: 5%;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;height: 20px;line-height: 20px;cursor: pointer;}
 .header-bottom .header-search .search-hot .search-hot-list li a {display: inline-block;padding: 2px 10px;}
 
 @media only screen and (min-width:1200px) {

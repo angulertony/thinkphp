@@ -71,13 +71,4 @@ class CategoryController extends Controller {
 
 		$this->ajaxReturn($children);	
 	}
-	
-	public function test_add(){
-		$this->categoryD = D("Category");
-		$getlevel1 = $this->categoryD ->getChild(1);
-		dump($getlevel1);
-//		$this->categoryD->addData(1,2,"test");
-		
-	}
-	
 }

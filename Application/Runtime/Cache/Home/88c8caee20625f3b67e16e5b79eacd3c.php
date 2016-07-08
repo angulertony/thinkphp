@@ -1,8 +1,13 @@
-<?php if (!defined('THINK_PATH')) exit();?><!--
-	作者：ght
-	时间：2016-07-04
-	描述：stair navigation
--->
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,6 +26,7 @@
 		<link rel="stylesheet" href="/Application/Home/View/css/footer.css" />
 		<link rel="stylesheet" href="/Application/Home/View/css/category.css" />
 		<script type="text/javascript" src="/Application/Home/View/js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="/Application/Home/View/js/category.js"></script>
 	</head>
 	<body>
 		<!--
@@ -64,6 +70,12 @@
 	</div>
 </section>
 </header>
+<hr />
+    <!--
+	作者：ght
+	时间：2016-07-04
+	描述：stair navigation
+-->
 <section class="middle-mine search-mine">
 	<div>
 		<ul class="search-page1" id="category-stair">
@@ -86,20 +98,42 @@
 		================  <br />-->
 							<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
 		</ul>
+		
+		
 <div class="stair-nav" id="stair-nav">
 		<div>
 			<div style="float: left;">
 				<h2>一级视频资料</h2>
 				<div class="nav-vedio">
 					<ul class="vedio-list">
-						<li>1</li>
-						<li>1</li>
-						<li>1</li>
-						<li>1</li>
-						<li>1</li>
+						<li><img src="/Application/Home/View/image/1.jpg" alt="图片"/></li>
+						<li><img src="/Public/1.jpg"/></li>
+						<li><img src="/Home/View/image/1.jpg"/></li>
+						<li><img src="/Application/Home/View/image/1.jpg"/></li>
+						<li><img src="/Home/image/1.jpg"/></li>
 					</ul>
 				</div>
 			</div>
+			
+			<BR />
+			
+			<BR />
+			
+			<BR />
+			/Home
+			<BR />
+			/Home/Category
+			<BR />
+			/Home/Category/index
+			<BR />
+			/Home/Category/index.html
+			<BR />
+			/Public
+			<BR />
+			/Application/Home/View/js
+			<BR />
+			/Application/Home/View/css
+			<BR />
 			<div style="float: right;">
 				<h2>一级图文资料</h2>
 				<div class="nav-text">
@@ -113,45 +147,11 @@
 			</div>
 		</div>
 </div>
+/Application/Home/View/footer.html
 
-<script>
-	//$("#category-stair a").click(function(){
-		//$("#category-stair").css({"-webkit-animation":"mymove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
-		//$("#category-stair").addClass("shousuo");
-		//$("#secondary").css({"-webkit-animation":"selectmove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
-		//$("#secondary").addClass("search-page1");
-		//$(".search-page1 a li p").css("display","none");
-	//});
-	$("#category-stair a").each(function(index){
-		$("#category-stair a").click(function(){
-			$("#category-stair a").removeClass("int");
-			$(this).addClass("int");
-		})
-	});
-	$(".search-page1 a li p").each(function(){
-		$(".search-page1 a li p").hover(function(){
-			$(this).parent().css("color","transparent");
-			$(this).children(".list-top").css({"-webkit-animation":"list-topmove 0.1s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
-			$(this).children(".list-bottom").css({"-webkit-animation":"list-bottommove 0.1s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
-		},
-		function(){
-			$(this).parent().css("color","#fff");
-			$(this).children(".list-top").css({"-webkit-animation":"list-topmoved 0.1s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
-			$(this).children(".list-bottom").css({"-webkit-animation":"list-bottommoved 0.1s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
-		})
-	});
-	$(".search-page1 .list-bottom").click(
-		function(){
-		$("#category-stair").css({"-webkit-animation":"mymove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
-		//$("#category-stair").addClass("shousuo");
-		$("#secondary").css({"-webkit-animation":"selectmove 0.4s infinite","-webkit-animation-iteration-count":"1","animation-fill-mode":"forwards"});
-		//$("#secondary").addClass("search-page1");
-		$(".search-page1 a li p").css("display","none");
-	}
-	);
-</script>
+<hr />
 <section class="copyright">
-	<div>Copyright © 2016 XueXYZ. All Rights Reserved.<br> XueXYZ 版权所有</div>
+	<div>11111111111.<br> XueXYZ 版权所有</div>
 </section>
 </body>
 </html>

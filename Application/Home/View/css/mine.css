@@ -8,12 +8,14 @@
 .middle-mine .mine-txt h3{}
 .mine-order{background: rgba(255,255,255,0.3);position: absolute;margin-top:-188px;width:92%;height: 188px;}
 .order-mine-page li{display: inline-block;float: left;/*width: 15%;*/text-align: center;border: 1px solid #BBBBBB;padding: 5px;margin-left: 1%;margin-left: 1%;background: rgba(255,255,255,0.3);margin-top: 1%;}
-.mine-order label{display: inline-block;float: right;/*width: 15%;*/text-align: center;border: 1px solid #BBBBBB;padding: 0 10px;margin-right: 1%;font-size: 25px;font-weight: bold;background: rgba(255,255,255,0.3);margin-top: 1%;border-radius:5px ;}
+.mine-order label{display: inline-block;float: right;/*width: 15%;*/text-align: center;border: 1px solid #BBBBBB;padding: 0 10px;margin-right: 1%;font-size: 25px;font-weight: bold;background: rgba(255,255,255,0.3);margin-top: 1%;border-radius:5px ;cursor: pointer;}
 .order-menu{position: absolute;width: 92%;height: 188px;margin-top: -188px;background: rgba(255,255,255,0.3);}
 .order-menu ul span{display: inline-block;float: right;text-align: center;border: 1px solid #BBBBBB;padding: 0 10px;margin-right: 1%;font-size: 18px;font-weight: bold;background: rgba(255,255,255,0.3);margin-top: 1%;border-radius: 5px;height: 35px;line-height: 35px;}
 .order-mine-page{display: block;overflow: hidden;height: 160px;/*background: rgba(26,26,26,0.6);*/padding: 0 2%;}
-.order-mine-page li{display: inline-block;float: left;/*width: 15%;*/text-align: center;border: 1px solid #BBBBBB;padding: 5px;margin-left: 1%;margin-left: 1%;background: rgba(255,255,255,0.3);margin-top: 1%;}
+.order-mine-page li{display: inline-block;float: left;min-width: 50px;text-align: center;border: 1px solid #BBBBBB;padding: 5px;margin-left: 1%;margin-left: 1%;background: rgba(255,255,255,0.3);margin-top: 1%;cursor: pointer;}
+.order-mine-page li:hover,.order-mine-page li:active{background: rgba(0,0,0,0.3);color: #FFFFFF;}
 .order-head{font-size: 20px;font-weight: bold;color: #FFFFFF;height: 29px;line-height: 29px;}
+.order-head.out{color: #030303;}
 @media only screen and (min-width:1200px) {
 	.middle-mine .mine-txt div button{width: 230px;font-size: 25px;padding: 10px;}
 	.middle-mine .mine-txt h2{font-size: 48px;}

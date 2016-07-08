@@ -5,5 +5,4 @@ return array(
     "config"=>array(),
     "alias"=>array(),
     "tags"=>array(),
-    
 );

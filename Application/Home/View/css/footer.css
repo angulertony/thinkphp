@@ -1,18 +1,20 @@
 /*底部--相关推荐*/
 
 .interfix{}
-.interfix .fix-page{display: block;}
-.interfix .fix-page li{display: inline-block;width: 100%;}
+.interfix .fix-page{display: block;opacity: 0.6;padding: 0 20px;}
+.interfix .fix-page li{display: inline-block;width: 100%;cursor: default;}
 .interfix .fix-page li a{display: inline-block;width: 100px;height: 80px;float: left;}
-.fix-page .fix-page-search1{background: #ffce41;opacity: 0.3;}
+.fix-page .fix-page-search1{}
  
 
 /*底部--排行*/
 
 .sorting{overflow: hidden;}
 .sorting ul{display: block;width: 20%;float: left;background:#A0C5E8;opacity: 0.8;margin: 0 2.5%;}
-.sorting ul li{display: inline-block;width: 100%;height: 25px;line-height: 25px;border-bottom: 1px solid #BBBBBB;}
-
+.sorting .sort-head{width: 100%;display: inline-block;background: rgba(0,0,0,0.3);height: 30px;line-height: 35px;text-align: center;}
+.sorting ul li{display: inline-block;width: 100%;height: 25px;line-height: 25px;border-bottom: 1px solid #BBBBBB;cursor: default;}
+.sorting ul li:hover{color: #e4393c;background: rgba(255,255,255,0.3);}
+.sorting ul li:active{color: #FFFFFF;background: blue;}
 /*底部--声明*/
 
 .copyright{margin: 5px 0;}

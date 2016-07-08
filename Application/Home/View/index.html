@@ -3,7 +3,6 @@
 	时间：2016-07-01
 	描述：mine / order and interfix
 -->
-<include file="./Application/Home/View/header.html"/>
 <section class="middle-mine">
 		<div class="mine-txt">
 			<div>
@@ -36,21 +35,19 @@
 </if>
 
 <div class="interfix">
-	<div class="order-head">相关推荐:</div>
+	<div class="order-head out">相关推荐:</div>
 	<ul class="fix-page">
 		<foreach name="recommend" key="key" item="value">
 			<li class="fix-page-search1">	
 				{$value}
 			</li>
 		</foreach>
-		
-		
 	</ul>
 </div>
 
 <if condition="!empty($userid)"> 	
 	<div class="annals">
-		<div class="order-head">浏览记录:</div>
+		<div class="order-head out">浏览记录:</div>
 		<ul class="order-mine-page">
 			<foreach name="history" key="key" item="value">
 				<li>{$value}</li>
@@ -61,21 +58,25 @@
 
 <div class="sorting">
 	<ul class="sort_1">
+		<span class="sort-head">排行榜1</span>
 		<foreach name="rank1" key="key" item="value">
 				<li>{$value}</li>
 		</foreach>
 	</ul>
 	<ul class="sort_2">
+		<span class="sort-head">排行榜1</span>
 		<foreach name="rank2" key="key" item="value">
 				<li>{$value}</li>
 		</foreach>
 	</ul>
 	<ul class="sort_3">
+		<span class="sort-head">排行榜1</span>
 		<foreach name="rank3" key="key" item="value">
 				<li>{$value}</li>
 		</foreach>
 	</ul>
 	<ul class="sort_4">
+		<span class="sort-head">排行榜1</span>
 		<foreach name="rank4" key="key" item="value">
 				<li>{$value}</li>
 		</foreach>
@@ -90,7 +91,6 @@
 	$(".order-menu ul span").click(function(){
 		$(".mine-order").fadeIn("slow");
 		$(".order-menu").fadeOut("slow");
-	})
+	});
 </script>
 <include file="./Application/Home/View/bottom.html"/>
-<include file="./Application/Home/View/footer.html"/>

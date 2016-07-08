@@ -1,43 +1,23 @@
 <?php
-namespace Common\Lib;
-/**
- *  访客类
- */
-class VisitorLib {
-	
-	//用户表对象
-	private $userM = null;
-	
-	private $id = null;
-	
-	private $isMust = 0;
-	
-   	public function __construct() {
-   		$this->userM = M("user");
-   	}
+namespace Home\Common;
+class LoginCommon {
 	
 	/*
-	 * $pram需要获取访客的信息
-	 * $isMust是否强制跳转登录
+	 * 入口
 	 */
-	public function get($pram){
-		$this->isMust = $isMust;
-		$this->id = $this->getSession();
-		if(!is_null($this->id)){
-			if($pram === "id"){
-				$result = $this->$id;
-			}elseif($pram === "user_name"){
-				$result = $this->userM->where("id={$this->id}")->getField('user_name');		
-			}else{
-				$result = $this->userM->where("id={$this->id}")->find();
-			}
-			return $result;
+	public function run($id="0"){
+		if($id){
+			//用户是登录进入,则id需传入用户id
+			$this->setCookie($id);
+			$this->setSession($id);
 		}else{
-			return 0;
+			//用户已登录则$id为0;
+			$id = $this->getSession();
 		}
+		return $id;
 	}
 	
-		
+	
 	/*
 	 * 将用户信息在服务器文件中id加密后存到浏览器cookie
 	 */
@@ -55,12 +35,8 @@ class VisitorLib {
 	 * 取出浏览器cookie解密,验证  
 	 */
 	private function getCookie(){
-		if(empty(cookie("xyzId"))){
-			//用户首次进入/用户手动删除cookie
-			return null;
-		}
-		$encrypted =urldecode(cookie("xyzId"));
-
+		$encrypted =urldecode(cookie("xyzId")); 
+		
 		$public_key = PUBLIC_ROOT."rsa_public_key.pem";
 		$pu_key = openssl_pkey_get_public(file_get_contents($public_key)); 
 		$decrypted = "";
@@ -70,15 +46,10 @@ class VisitorLib {
 		$head = substr($decrypted,0,3);
 		$foot = substr($decrypted,strlen($decrypted)-3,3);
 		
-		//Cookie错误
 		if($head !== "xyz" || $foot !== "xyz" || !is_numeric($id)){
-			if($this->isMust){
-				echo "使用必须登录功能,跳转登录页面...";
-			}else{
-				echo "cookie信息验证失败.";
-				setcookie("xyzId",null);
-			}
-			return null;
+			setcookie("xyzId",null);
+			echo "cookie信息验证失败.";
+			$this->toLogin();
 		}
 		//cookie正确
 		return  $id; 
@@ -112,4 +83,14 @@ class VisitorLib {
 		$this->setSession($id);
 		return $id;
 	}
+	
+	/*
+	 * 跳转登录页面
+	 */
+	private function toLogin(){
+		//跳转login界面
+		echo "信息验证失败,跳转登录界面";
+		exit;
+	}
+	
 }

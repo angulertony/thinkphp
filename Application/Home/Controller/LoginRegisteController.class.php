@@ -1,14 +1,14 @@
 <?php
-namespace \Home\Controller;
-class LoginRegisteController extends \Think\Controller\Controller{
+namespace Home\Controller;
+use Think\Controller;
+class LoginRegisteController extends Controller{
 	
-	private $userD;
+	private $userD = 0;
 	
 	public function _before_index(){
-		$this->userD = D("User");
+		//$this->userD = D("User");
 	}
-	
-	public function index(){ 
+	public function index(){
 		$this->display("/LoginRegiste");
 	}
 	
@@ -20,6 +20,8 @@ class LoginRegisteController extends \Think\Controller\Controller{
 		$userInfo = $this->userD->verifyUser($username,$password);
 		
 		$this->assign("userInfo",$userInfo);		
+		//设置cookie
+		//visitor(1)->(id);
 		//显示登陆前的页面
 		echo "登录成功!";
 		dump($userInfo);
