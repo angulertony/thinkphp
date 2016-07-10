@@ -22,15 +22,12 @@ class CategoryModel extends Model {
 		return $this->where("class=3 and if_show=1")->select();
 	}
 	
-	//获取下1级
-	public function getChild($parent){
+	//获取下级
+	public function getChildren($parent){
 		return $this->where(array("parent"=>$parent,"if_show"=>1))->select();
 	}
 	
 	
-	//获取该分类下所有子类
-	public function getChildren($parent){
-	}
 	
 	//添加数据
 	public function addData($class,$pid,$name,$ifShow=1,$sortOrder=65525){

@@ -1,0 +1,12 @@
+[ 2016-07-10T08:28:27+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1146:Table 'xuexyz.xyz_start_bg' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xyz_start_bg`
+ERR: 1146:Table 'xuexyz.xyz_start_bg' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xyz_start_bg`
+

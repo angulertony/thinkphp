@@ -70,7 +70,6 @@
 	</div>
 </section>
 </header>
-<hr />
     <!--
 	作者：ght
 	时间：2016-07-04
@@ -98,58 +97,84 @@
 		================  <br />-->
 							<a><li><?php echo ($value["name"]); ?></li></a><?php endforeach; endif; ?>
 		</ul>
-		
-		
 <div class="stair-nav" id="stair-nav">
 		<div>
 			<div style="float: left;">
-				<h2>一级视频资料</h2>
-				<div class="nav-vedio">
-					<ul class="vedio-list">
-						<li><img src="/Application/Home/View/image/1.jpg" alt="图片"/></li>
-						<li><img src="/Public/1.jpg"/></li>
-						<li><img src="/Home/View/image/1.jpg"/></li>
-						<li><img src="/Application/Home/View/image/1.jpg"/></li>
-						<li><img src="/Home/image/1.jpg"/></li>
+				<div class="calssify">
+					<ul>
+						<li>分类一</li>
+						<li>分类一</li>
+						<li>分类一</li>
 					</ul>
 				</div>
+				<div class="nav-vedio">
+					<div class="vedio-list">
+						<ul class="vedio-list1">
+							<a>
+								<li>
+									<img src="/Application/Home/View/image/1.jpg"/>
+									<span class="explain">解说文字</span>
+									<p><i class="hover-logo"></i></p>
+								</li>
+							</a>
+							<a>
+								<li><img src="/Application/Home/View/image/5.jpg"/><span class="explain">解说文字</span><p><i class="hover-logo"></i></p></li>
+							</a>
+							<a>
+								<li><img src="/Application/Home/View/image/6.jpg"/><span class="explain">解说文字</span><p><i class="hover-logo"></i></p></li>
+							</a>
+						</ul>
+						<ul class="vedio-list2">
+							<a>
+								<li><img src="/Application/Home/View/image/2.jpg"/><span class="explain">1111</span><p><i class="hover-logo"></i></p></li>
+							</a>
+							<a>
+								<li><img src="/Application/Home/View/image/3.jpg"/><span class="explain">解说文字</span><p><i class="hover-logo"></i></p></li>
+							</a>
+							<a><li style="position: absolute;right: 0;top: 0;"><b style="margin-top: 50%;display: inline-block;border: 1px solid #999999;cursor: default;">进入视频专区</b></li></a>
+						</ul>
+					</div>
+				</div>
 			</div>
-			
-			<BR />
-			
-			<BR />
-			
-			<BR />
-			/Home
-			<BR />
-			/Home/Category
-			<BR />
-			/Home/Category/index
-			<BR />
-			/Home/Category/index.html
-			<BR />
-			/Public
-			<BR />
-			/Application/Home/View/js
-			<BR />
-			/Application/Home/View/css
-			<BR />
 			<div style="float: right;">
-				<h2>一级图文资料</h2>
+				<div class="calssify">
+					<ul>
+						<li>分类一</li>
+						<li>分类一</li>
+						<li>分类一</li>
+					</ul>
+				</div>
 				<div class="nav-text">
 					<ul class="text-list">
-						<li>3</li>
-						<li>3</li>
-						<li>3</li>
-						<li>3</li>
+						<li>
+							<p>
+								<h3>标题1</h3>
+								<span>正文引言:152485451515sdfadfsafafsagfdsagdsagdsagadsgfsagdsagds阿斯顿发发的撒范德萨范德萨范德萨范德萨范德萨范德萨范德萨范德萨第三方的萨芬大范德萨范德萨发 </span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<h3>标题1</h3>
+								<span>正文引言:152485451515sdfadfsafafsagfdsagdsagdsagadsgfsagdsagds阿斯顿发发的撒范德萨范德萨范德萨范德萨范德萨范德萨范德萨范德萨第三方的萨芬大范德萨范德萨发 </span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<h3>标题1</h3>
+								<span>正文引言:152485451515sdfadfsafafsagfdsagdsagdsagadsgfsagdsagds阿斯顿发发的撒范德萨范德萨范德萨范德萨范德萨范德萨范德萨范德萨第三方的萨芬大范德萨范德萨发 </span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<h3>标题1</h3>
+								<span>正文引言:152485451515sdfadfsafafsagfdsagdsagdsagadsgfsagdsagds阿斯顿发发的撒范德萨范德萨范德萨范德萨范德萨范德萨范德萨范德萨第三方的萨芬大范德萨范德萨发 </span>
+							</p>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 </div>
-/Application/Home/View/footer.html
-
-<hr />
 <section class="copyright">
 	<div>11111111111.<br> XueXYZ 版权所有</div>
 </section>
