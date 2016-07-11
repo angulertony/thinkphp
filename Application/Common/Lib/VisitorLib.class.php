@@ -20,7 +20,7 @@ class VisitorLib {
 	 * $pram需要获取访客的信息
 	 * $isMust是否强制跳转登录
 	 */
-	public function get($pram,$isMust){
+	public function get($pram){
 		$this->isMust = $isMust;
 		$this->id = $this->getSession();
 		if(!is_null($this->id)){
