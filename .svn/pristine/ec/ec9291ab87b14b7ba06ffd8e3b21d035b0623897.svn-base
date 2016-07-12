@@ -1,0 +1,122 @@
+	/* 头部 */
+	
+.header-top{background: #F0EAD8;min-height: 40px;position:fixed;top: 0;right: 0;left: 0;z-index: 9999;display: block;margin: 0;width: 100%;min-width: 735px;height: 48px;max-height: 44px;font-size: 18px;-webkit-user-select: none;}
+.header-top .header-left{float: left;width: 20%;}
+.header-top .header-right{display: inline-block;text-align: center;}
+.header-top .header-right .top-item{display: inline-block;float: left;}
+.header-top .header-right .top-item li{display: inline-block;padding: 0 5px;text-align: center;}
+.header-top .header-right .top-check{float: right;}
+.header-bottom{position: relative;margin-top: 44px;min-width: 735px;overflow: hidden;}
+.header-bottom .header-logo{display: inline-block;float: left;}
+.header-bottom .header-search{float: right;}
+.header-bottom .header-search .search-text{padding-left:30px;margin-top: ;font-size: 16px;font-weight: 400;letter-spacing: normal;color: #333;outline: none;margin: 5px 0 5px 10%;}
+.header-bottom .header-search .search-hot{display: inline-block;width: 100%;margin-left: 10%;font-weight: 400;}
+.header-bottom .header-search .search-hot p{float: left;display: inline-block;}
+.header-bottom .header-search .search-hot .search-hot-list{display: inline-block;float: left;color: #e4393c;margin: 0 15px;width: 100%;}
+.header-bottom .header-search .search-hot .search-hot-list li{float: left;display: inline-block;width: 20%;text-align: center;margin-left: 5%;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;}
+.header-bottom .header-search .search-hot .search-hot-list li a {display: inline-block;padding: 2px 10px;}
+
+@media only screen and (min-width:1200px) {
+	body {font-size:18px;
+	/*line-height:1.45;*/
+	font-weight:400;
+	letter-spacing:normal}
+	.header-top{padding: 0 10px;}
+	.header-top .header-left{display: inline-block;}
+	.header-top .header-right{width: 80%;}
+	.header-top .header-left,.header-top .header-right{margin-top: 0.4%;}
+	.header-top .header-right .top-item{width: 80%;}
+	.header-top .header-right .top-item li{float: right;}
+	.header-top .header-right .top-check{width: 20%;}
+	.header-bottom{height: 85px;}
+	.header-bottom .header-logo{height: 80px;width: 30%;}
+	.header-bottom .header-search{height: 80px;width: 70%;}
+	.header-bottom .header-search .search-text{width: 40%;line-height: 35px;height: 35px;}
+	.header-bottom .header-search .search-hot{font-size: 18px;width: 40%;}
+}
+@media only screen and (min-width:992px) and (max-width:1200px) {
+	body {font-size:18px;
+	/*line-height:1.45;*/
+	font-weight:400;
+	letter-spacing:normal}
+	.header-top{padding: 0 10px;}
+	.header-top .header-left{display: inline-block;}
+	.header-top .header-right{width: 80%;}
+	.header-top .header-left,.header-top .header-right{margin-top: 0.4%;}
+	.header-top .header-right .top-item{width: 80%;}
+	.header-top .header-right .top-item li{float: right;}
+	.header-top .header-right .top-check{width: 20%;}
+	.header-bottom{height: 85px;}
+	.header-bottom .header-logo{height: 80px;width: 30%;}
+	.header-bottom .header-search{height: 80px;width: 70%;}
+	.header-bottom .header-search .search-text{width: 40%;line-height: 35px;height: 35px;}
+	.header-bottom .header-search .search-hot{font-size: 18px;width: 40%;}
+}
+@media only screen and (min-width:735px) and (max-width:992px){
+	body {
+	font-size:16px;
+	/*line-height:1.35;*/
+	font-weight:400;
+	letter-spacing:normal}
+	.header-top{padding: 0 0px;}
+	.header-top .header-left{display: none;}
+	.header-top .header-right{width: 100%;min-width: 375px;}
+	.header-top .header-left,.header-top .header-right{margin-top: 8px;}
+	.header-top .header-right .top-item{width: 55%;}
+	.header-top .header-right .top-item li{float: left;}
+	.header-top .header-right .top-check{width: 45%;}
+	.header-bottom{height: 65px;}
+	.header-bottom .header-logo{height: 60px;width: 30%;}
+	.header-bottom .header-search{height: 60px;width: 70%;}
+	.header-bottom .header-search .search-text{width: 50%;line-height: 30px;height: 30px;}
+	.header-bottom .header-search .search-hot{font-size: 14px;width: 50%;}
+}
+/*@media only screen and (max-width:375px){
+	body {
+	font-size:14px;
+	font-weight:400;
+	letter-spacing:normal}
+	.header-top{padding: 0 0px;}
+	.header-top .header-left{display: none;}
+	.header-top .header-right{width: 100%;}
+	.header-top .header-left,.header-top .header-right{margin-top: 1.6%;}
+	.header-top .header-right .top-item{width: 50%;}
+	.header-top .header-right .top-item li{float: left;}
+	.header-top .header-right .top-check{width: 50%;}
+	.header-bottom{height: 65px;}
+	.header-bottom .header-logo{height: 60px;width: 30%;}
+	.header-bottom .header-search{height: 60px;width: 70%;}
+	.header-bottom .header-search .search-text{width: 80%;line-height: 30px;height: 30px;}
+	.header-bottom .header-search .search-hot{font-size: 14px;}
+}*/
+
+	/* 中间 */
+
+.middle-mine{width: 100%;min-width: 735px;}
+.middle-mine .mine-img{background-repeat: no-repeat;background-position: 0 0;height: 300px;overflow: visible;}
+.middle-mine .mine-txt{text-align: center;}
+.middle-mine .mine-txt div{width: 70%;}
+.middle-mine .mine-txt div button{background: #C1E0FE;border: 1px solid #c1a0fe;border-radius: 5px;font-size: 25px;color: #FFFFFF;}
+.middle-mine .mine-txt h2{letter-spacing: 0;font-family: "HanHei SC", "PingHei", "PingFang SC", "STHeitiSC-Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
+.middle-mine .mine-txt h3{}
+.middle-mine .mine-order{}
+@media only screen and (min-width:1024px) {
+	.middle-mine .mine-txt div button{width: 230px;font-size: 25px;padding: 10px;}
+	.middle-mine .mine-txt h2{font-size: 48px;}
+	.middle-mine .mine-txt h3{font-size: 32px;}
+}
+@media only screen and (min-width:735px) and (max-width:1024px){
+	.middle-mine .mine-txt div button{width: 230px;font-size: 25px;padding: 10px;}
+	.middle-mine .mine-txt h2{font-size: 48px;}
+	.middle-mine .mine-txt h3{font-size: 32px;}
+}
+@media only screen and (min-width:375px) and (max-width:735px){
+	.middle-mine .mine-txt div button{width: 160px;font-size: 20px;padding:5 10px;}
+	.middle-mine .mine-txt h2{font-size: 38px;}
+	.middle-mine .mine-txt h3{font-size: 25px;}
+}
+@media only screen and (max-width:375px){
+	.middle-mine .mine-txt div button{width: 100px;font-size: 18px;padding:0 10px;}
+	.middle-mine .mine-txt h2{font-size: 28px;}
+	.middle-mine .mine-txt h3{font-size: 20px;}
+}

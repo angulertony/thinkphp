@@ -1,6 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>
-<hr />
-    <!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -34,7 +32,7 @@
 			<br />
 			简&nbsp;&nbsp;介:
 			<br />
-			<textarea name="present" rows="10" cols="60">资源简介</textarea>
+			<textarea name="introduce" rows="10" cols="60">资源简介</textarea>
 			<br />
 			是否显示:
 			<input type="radio" name="ifshow" id="ifshow" value="1" checked="checked"/><label for="ifshow">显示</label>
@@ -44,5 +42,3 @@
 		</form>	
 	</body>
 </html>
-
-<hr />
