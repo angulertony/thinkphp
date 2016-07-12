@@ -1,4 +1,0 @@
-<include file="Public/top" />
-<include file="Public/header" />
-    {__CONTENT__}
-<include file="Public/footer"/>

@@ -1,5 +1,0 @@
-<include file="Public/header" />
-<hr />
-    {__CONTENT__}
-<hr />
-<include file="Public/footer"/>
