@@ -104,34 +104,37 @@ callback	检测文件是否存在回调，如果存在返回文件信息数组
 	
 function e($pram,$default){
 	if(is_array($pram)){
-		if(is_array($default)){
-			foreach($pram as $key=>$value){
-				if(empty($value)){
-					//未写完...
-//					if($default[$key]){
-//						
-//					}else{
-//						
-//					}
-//					$value=					
-				}else{
-					
+			if(is_array($default)){
+				foreach($pram as $key=>$value){
+					if(empty($value)){
+						//未写完...
+	//					if($default[$key]){
+	//						
+	//					}else{
+	//						
+	//					}
+	//					$value=					
+					}else{
+						
+					}
 				}
+			}else{
+				echo "error:e(),pram is array,default must be array";
+				return 0;
 			}
-		}else{
-			echo "error:e(),pram is array,default must be array";
-			return 0;
-		}
 	}else{
-		if(is_array($default)){
-			echo "error:e(),pram is not  array ,default must not be array";
-			return 0;
-		}else{
-			return	empty($pram) ? $default : $pram;
+			if(is_array($default)){
+				echo "error:e(),pram is not  array ,default must not be array";
+				return 0;
+			}else{
+				return	empty($pram) ? $default : $pram;
+			}
+			
 		}
-		
 	}
-	
 }
-	
+
+function xml(){
+	$xml = new \Common\Lib\XmlLib();
+	return 	$xml;
 }

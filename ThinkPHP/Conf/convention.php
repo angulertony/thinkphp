@@ -50,7 +50,7 @@ return  array(
     'DEFAULT_TIMEZONE'      =>  'PRC',	// 默认时区
     'DEFAULT_AJAX_RETURN'   =>  'JSON',  // 默认AJAX 数据返回格式,可选JSON XML ...
     'DEFAULT_JSONP_HANDLER' =>  'jsonpReturn', // 默认JSONP格式返回的处理方法
-    'DEFAULT_FILTER'        =>  'htmlspecialchars', // 默认参数过滤方法 用于I函数...
+    'DEFAULT_FILTER'        =>  'htmlspecialchars,strip_tags,mysql_real_escape_string', // 默认参数过滤方法 用于I函数...
 
     /* 数据库设置 */
     'DB_TYPE'               =>  'mysql',     // 数据库类型
@@ -121,7 +121,7 @@ return  array(
     'TMPL_CACHE_PREFIX'     =>  '',         // 模板缓存前缀标识，可以动态改变
     'TMPL_CACHE_TIME'       =>  0,         // 模板缓存有效期 0 为永久，(以数字为值，单位:秒)
     'TMPL_LAYOUT_ITEM'      =>  '{__CONTENT__}', // 布局模板的内容替换标识
-    'LAYOUT_ON'             =>  true, // 是否启用布局
+    'LAYOUT_ON'             =>  false, // 是否启用布局
     'LAYOUT_NAME'           =>  'layout', // 当前布局名称 默认为layout
 
     // Think模板引擎标签库相关设定

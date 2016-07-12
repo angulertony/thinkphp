@@ -4,10 +4,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>Resource</title>
 	</head>
 	<body>
-		<a href="add">add</a>
+		<a href="/admin/resource/add">新增资源</a>
 	</body>
 </html>
 

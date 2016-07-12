@@ -10,10 +10,8 @@
 		<form action="/admin/category/add" method="post" enctype="multipart/form-data">
 			上级分类:
 			<select name="pid">
-				<?php if(is_array($all)): foreach($all as $key=>$item): ?><option value="<?php echo ($item['id']); ?>"><?php echo ($item['name']); ?></option><?php endforeach; endif; ?>
+				<?php if(is_array($all)): foreach($all as $key=>$item): ?><option  value="<?php echo ($item['id']); ?>" ><?php echo ($item['name']); ?></option><?php endforeach; endif; ?>
 			</select>
-			
-			
 			<br />
 			分类图标:			
 			<input type="file" name="ico1" id="ico1" value="选择" /><br />
@@ -29,7 +27,6 @@
 			<br />
 			<input type="submit" value="提交"/>
 		</form>
-		
 	</body>
 </html>
 <hr />

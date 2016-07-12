@@ -336,7 +336,6 @@ function I($name,$default='',$filter=null,$datas=null) {
         default:
             return null;
     }
-
     if(''==$name) { // 获取全部变量
         $data       =   $input;
         $filters    =   isset($filter)?$filter:C('DEFAULT_FILTER');
@@ -364,6 +363,7 @@ function I($name,$default='',$filter=null,$datas=null) {
             }elseif(is_int($filters)){
                 $filters    =   array($filters);
             }
+            
             if(is_array($filters)){
                 foreach($filters as $filter){
                     if(function_exists($filter)) {

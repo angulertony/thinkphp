@@ -28,9 +28,10 @@ class CategoryModel extends Model {
 	}
 	
 	
-	
 	//添加数据
 	public function addData($class,$pid,$name,$ifShow=1,$sortOrder=65525){
+		$sortOrder = empty($sortOrder) ? 65525 : $sortOrder;
+		$pid = empty($pid) ? 0 : $pid;
 		$addData = array(
 			"class"=>$class,
 			"pid"=>$pid,

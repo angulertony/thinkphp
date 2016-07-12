@@ -4,7 +4,6 @@ use Think\Controller;
 class CategoryController extends Controller{
 	
 	private $categoryD;
-	private $xmlPath;
 	private $defaultIco;
 	
 	public function index(){
@@ -13,8 +12,6 @@ class CategoryController extends Controller{
 	
 	public function _before_add(){
 		$this->categoryD = new \Home\Model\CategoryModel();
-		$this->xmlPath = PUBLIC_ROOT."category.inc";
-//		$this->defaultIco = C("defaultIco");
 	}
 	
 	public function add(){
@@ -25,23 +22,18 @@ class CategoryController extends Controller{
 		}else{
 			$pid = I("post.pid/d",0,"int");
 			$name = I("post.name/s");
-			$class = empty($pid) ? 1 : $pid + 1;
+			$class = $this->categoryD->where(array('id'=>$pid))->getField('class') + 1 ;
 			$ifShow = I("post.ifShow/d");
 			$sortOrder = I("post.sortOrder/d");			
-			$icoInfo =  upLoad(array('savePath'=>'Ico/'));//一维或二维数组 /或0
-//			$icoInfo = e($icoInfo,0);
+			$icoInfo =  upLoad(array('savePath'=>'Ico/'));//一维或0 
+			$icoInfo = empty($icoInfo) ? array('savename'=>"ico.jpg") : $icoInfo ;
+//			$icoInfo = e($icoInfo,0);//用于检测是否为空,为空赋予默认值
 			$id = $this->categoryD->addData($class,$pid,$name,$ifShow,$sortOrder);
+			$ico =$icoInfo["savename"];
 			
-			if(!file_exists($this->xmlPath)){ return; }
-			$id = "id".$id;
-			$icoPath =$icoInfo["savename"];
-			$xml = simplexml_load_file($this->xmlPath);
-			$xml->addChild($id,"1");
-			$xml->$class->addAttribute("pid",$pid);
-			$xml->$class->addAttribute("name",$name);
-			$xml->$class->addAttribute("ico",$icoPath);
-			$xml->asXML($this->xmlPath);
-			echo "新增成功";
+			$xml = xml()->addC(array('id'=>$id,'pid'=>$pid,'class'=>$class,'name'=>$name,'ico'=>$ico));
+			if($xml === false){  echo "Add Category Fail!"; return;}			
+			echo "Add Category Success!";
 		}
 	}
 }
